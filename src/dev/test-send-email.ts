@@ -12,6 +12,7 @@ const fixture: UrDanchi[] = [
 		danchiNm: '金町第二',
 		place: '葛飾区南水元3-6ほか',
 		traffic: '<li>JR常磐線「金町」駅 徒歩10~12分</li>',
+		floorAll: '32',
 		room: [
 			{
 				id: '000010738',

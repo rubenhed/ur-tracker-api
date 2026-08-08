@@ -18,7 +18,7 @@ export function buildRoomRow(danchi: UrDanchi, room: UrDanchi['room'][number]): 
       <td style="padding:12px;border-bottom:1px solid #f1f5f9">${danchi.place}</td>
       <td style="padding:12px;border-bottom:1px solid #f1f5f9">${room.rent}</td>
       <td style="padding:12px;border-bottom:1px solid #f1f5f9">${room.type} / ${room.floorspace}</td>
-      <td style="padding:12px;border-bottom:1px solid #f1f5f9">${room.floor}</td>
+      <td style="padding:12px;border-bottom:1px solid #f1f5f9">${room.floor} / ${danchi.floorAll}階</td>
       <td style="padding:12px;border-bottom:1px solid #f1f5f9">
         <a href="${roomLink}" style="${BUTTON_STYLE}">Room ↗</a>
       </td>

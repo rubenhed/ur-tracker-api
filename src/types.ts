@@ -19,5 +19,6 @@ export type UrDanchi = {
 	danchiNm: string; // complex name, e.g. "金町第二"
 	place: string; // address
 	traffic: string; // nearest station(s) + walk time, HTML string (<li> list)
+	floorAll: string;
 	room: UrRoom[]; // currently vacant rooms in this complex
 };
