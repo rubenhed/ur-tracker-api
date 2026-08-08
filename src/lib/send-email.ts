@@ -11,12 +11,13 @@ const BUTTON_STYLE =
 export function buildRoomRow(danchi: UrDanchi, room: UrDanchi['room'][number]): string {
 	const roomLink = `${UR_DOMAIN}${room.roomLinkPc}`;
 	const danchiLink = `${UR_DOMAIN}${room.allRoomUrl}`;
+	const rentDisplay = room.commonfee ? `${room.rent}(${room.commonfee})` : room.rent;
 
 	return `
     <tr>
       <td style="padding:12px;border-bottom:1px solid #f1f5f9">${danchi.danchiNm}</td>
       <td style="padding:12px;border-bottom:1px solid #f1f5f9">${danchi.place}</td>
-      <td style="padding:12px;border-bottom:1px solid #f1f5f9">${room.rent}</td>
+      <td style="padding:12px;border-bottom:1px solid #f1f5f9">${rentDisplay}</td>
       <td style="padding:12px;border-bottom:1px solid #f1f5f9">${room.type} / ${room.floorspace}</td>
       <td style="padding:12px;border-bottom:1px solid #f1f5f9">${room.floor} / ${danchi.floorAll}階</td>
       <td style="padding:12px;border-bottom:1px solid #f1f5f9">
