@@ -23,7 +23,7 @@
 		},
 	],
 	"vars": {
-		"NOTIFY_EMAILS": "ruben.hedstrom@hotmail.com,atanaka917@gmail.com",
+		"NOTIFY_EMAILS": "ruben.hedstrom@hotmail.com",
 	},
 	/**
 	 * Smart Placement
