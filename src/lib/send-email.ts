@@ -59,7 +59,7 @@ export async function sendEmail(env: Env, danchis: UrDanchi[]): Promise<void> {
 
 	const { error } = await resend.emails.send({
 		from: 'UR Tracker API Version <onboarding@resend.dev>',
-		to: [env.NOTIFY_EMAIL],
+		to: env.NOTIFY_EMAILS.split(','),
 		subject: 'New UR Rooms Available',
 		html,
 	});
