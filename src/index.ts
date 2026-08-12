@@ -41,7 +41,7 @@ export default {
 		if (newIds.length > 0) {
 			const newDanchis = filterNewDanchis(current, newIds);
 			await sendEmail(env, newDanchis);
-			await sendNtfy(env, newIds.length, newDanchis);
+			ctx.waitUntil(sendNtfy(env, newIds.length, newDanchis)); // fires, doesn't block, but instance will not be killed until complete
 		}
 
 		if (newIds.length > 0 || currentIds.length !== previousIds.length) {
