@@ -19,7 +19,7 @@ import { fetchRooms } from './lib/fetch-rooms';
 import { buildRoomIds, getSnapshot, updateSnapshot } from './lib/snapshot';
 import { compareRooms, filterNewDanchis } from './lib/compare-rooms';
 import { sendEmail } from './lib/send-email';
-import { sendNtfy } from './lib/send-ntfy';
+// import { sendNtfy } from './lib/send-ntfy';
 
 export default {
 	async fetch(req) {
@@ -41,7 +41,7 @@ export default {
 		if (newIds.length > 0) {
 			const newDanchis = filterNewDanchis(current, newIds);
 			await sendEmail(env, newDanchis);
-			ctx.waitUntil(sendNtfy(env, newIds.length, newDanchis)); // fires, doesn't block, but instance will not be killed until complete
+			// ctx.waitUntil(sendNtfy(env, newIds.length, newDanchis)); // fires, doesn't block, but instance will not be killed until complete
 		}
 
 		if (newIds.length > 0 || currentIds.length !== previousIds.length) {
